@@ -2,14 +2,85 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
+    
 }
-body{
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+h1{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
 }
+h2{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h3{
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+}
+
+/*ESTILOS HEADER*/
+.navBar{
+    height: 10vh;
+    display: flex;
+    background-color: #333333af;
+    justify-content: space-between;
+    color: #fff;
+    position: fixed;
+    z-index: 10000;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
+    
+}
+
+.logo img{
+   height: 10vh;
+   margin-left: 20px;
+}
+
+.navLinks{
+    display: flex;
+    gap: 25px;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    margin-right: 20px;
+}
+
+.navLinks a{
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.navLinks a:hover{
+    transform: scale(1.1);
+    color: #ff2c2c;
+    transition: 0.5s;
+}
+
+/*ESTILOS SECTION INICIO*/
 .inicio{
     display: flex;
     height: 110vh;
     width: 100%;
+    background-image: url(./imagens/apartamento.jpg);
+    background-size: cover;
 
 }
 
@@ -17,10 +88,9 @@ body{
 /*ESTILOS LADO ESQUERDO INICIO*/
 .sobre{
     height: 100%;
-    background-color: blue;
     right: 0;
     width: 100%;
-    background-image: url(./imagens/apartamento.jpg);
+    background:  linear-gradient(180deg,#0000001c,#0000002c,#0000003a,#0000004b,#00000057,#00000062,#fff);
     background-size: cover;
 }
 
@@ -30,6 +100,7 @@ body{
 /*ESTILOS PLANTAS*/
 
 .plantas{
+    padding-top: 50px;
     height: 100vh;
     width: 100%;
     display: flex;
@@ -37,7 +108,7 @@ body{
     justify-content: center;
     gap: 20px;
     flex-direction: column;
-    background: repeating-linear-gradient(#fff, #999, #555) ;
+    background: repeating-linear-gradient(#fff,#fff,#9999998e, #9999998e, #55555548, #fff) ;
 }
 .titulo{
     height: 25%;
@@ -81,6 +152,7 @@ body{
     border-radius: 20px;
     box-shadow: 0px 0px 10px #0000002c;
     backface-visibility: hidden;
+    border: solid 1px #333;
 }
 
 .frente{
@@ -164,17 +236,18 @@ body{
 .cadastro{
     display: flex;
     height: 100vh;
+    padding-top: 100px;
 }
 .contato{
     height: 100%;
     background-color: black;
     left: 0;
-    width: 65%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #fff;
-    background: repeating-linear-gradient(#555, #999, #fff) ;
+    background: repeating-linear-gradient(#fff,#fff, #9999998e, #55555548) ;
     background-size: cover;
 }
 
@@ -184,7 +257,6 @@ body{
     width: 100%;
    
     color: #000000;
-    height: 65%;
     flex-direction: column;
     align-items: center;
 
@@ -218,7 +290,7 @@ form{
     box-shadow: 2px 2px 2px 2px #00000057,
                 -2px 2px 2px 2px #00000057;
     align-items: center;
-    
+    padding-bottom: 10px;
     
 }
 
@@ -232,6 +304,8 @@ form h3{
     text-align: left;
     margin-left: 47px;
     margin-right: 21px;
+    font-size: 18px;
+
 }
 .input-single input{
     border: solid 1px #9b9b9b;
@@ -243,17 +317,21 @@ form h3{
 }
 
 .input-single input::placeholder{
-    padding: 10px;
+    padding: 10px, 10px, 10px, 0;
     font-size: 18px;
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 100;
+    font-style: normal;
 }
-
-
-
 
 
 .btn{
     margin-top: 10px;
     margin-bottom: 10px;
+    font-family: "Montserrat", sans-serif;
+    
+    
 }
 
 .btn button{
@@ -263,5 +341,14 @@ form h3{
     background-color: #ffffff00;
     border: solid 1px #9b9b9b;
     border-radius: 5px;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 
+}
+
+.btn button:hover{
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.5s;
 }
